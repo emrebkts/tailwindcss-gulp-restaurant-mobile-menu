@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btn_{
+    @apply px-4 py-3 rounded-xl inline-flex items-center justify-center transition-all bg-gray-200;
+}
+.btn_.btn_bho{
+    @apply text-primary-600 border-2 bg-transparent border-primary-600 border-solid rounded-full;
+}
+
+.btn-check:checked+.btn_ {
+
+    @apply bg-primary-600 text-white border-transparent;
+}

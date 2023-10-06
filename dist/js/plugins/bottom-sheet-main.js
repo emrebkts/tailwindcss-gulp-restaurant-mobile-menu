@@ -1,98 +1,125 @@
 // Copyright (c) 2022 Ivan Teplov
 
-const $ = document.querySelector.bind(document)
+$( document ).ready(function() {
 
-const openSheetButton = $("#open-sheet")
-const sheet = $("#sheet")
-const sheetContents = sheet.querySelector(".contents")
-const draggableArea = sheet.querySelector(".draggable-area")
+    const $$ = document.querySelector.bind(document)
 
-let sheetHeight // in vh
+    const openSheetButton = $$("#open-sheet")
+    const sheet = $$("#sheet")
+    const bottomSheetMenu = $(".bottom-sheet-menu");
+    const sheetContents = sheet?.querySelector(".contents")
+    const draggableArea = sheet?.querySelector(".draggable-area")
 
-const setSheetHeight = (value) => {
-    sheetHeight = Math.max(0, Math.min(100, value))
-    //sheetContents.style.height = `${sheetHeight}vh`
-    sheetContents.style.height = `auto`
+    let sheetHeight // in vh
 
-    if (sheetHeight === 100) {
-        sheetContents.classList.add("fullscreen")
-    } else {
-        sheetContents.classList.remove("fullscreen")
+    const setSheetHeight = (value) => {
+        sheetHeight = Math.max(0, Math.min(100, value))
+        //sheetContents.style.height = `${sheetHeight}vh`
+        sheetContents.style.height = `auto`
+
+        if (sheetHeight === 100) {
+            sheetContents.classList.add("fullscreen")
+        } else {
+            sheetContents.classList.remove("fullscreen")
+        }
     }
-}
 
-const setIsSheetShown = (isShown) => {
-    sheet.setAttribute("aria-hidden", String(!isShown))
-}
+    const setIsSheetShown = (isShown) => {
+        sheet.setAttribute("aria-hidden", String(!isShown))
+
+        if (isShown){
+            bottomSheetMenu.addClass("z-50");
+            bottomSheetMenu.addClass("h-screen");
+            $("body").css({
+                overflow : "hidden",
+            })
+
+        }else{
+            bottomSheetMenu.removeClass("z-50");
+
+            setTimeout(function() {
+                bottomSheetMenu.removeClass("h-screen");
+            }, 200)
+            $("body").css({
+                overflow : "unset",
+            })
+        }
+
+
+
+    }
 
 // Open the sheet when clicking the 'open sheet' button
-openSheetButton.addEventListener("click", () => {
-    //setSheetHeight(Math.min(50, 720 / window.innerHeight * 100))
-    setIsSheetShown(true)
-})
+    openSheetButton?.addEventListener("click", () => {
+        console.log("emre");
+        //setSheetHeight(Math.min(50, 720 / window.innerHeight * 100))
+        setIsSheetShown(true)
+    })
 
 // Hide the sheet when clicking the 'close' button
-sheet.querySelector(".close-sheet").addEventListener("click", () => {
-    setIsSheetShown(false)
-})
+    sheet?.querySelector(".close-sheet").addEventListener("click", () => {
+        setIsSheetShown(false)
+    })
 
 // Hide the sheet when clicking the background
-sheet.querySelector(".overlay").addEventListener("click", () => {
-    setIsSheetShown(false)
-})
+    sheet?.querySelector(".overlay").addEventListener("click", () => {
+        setIsSheetShown(false)
+    })
 
-const isFocused = element => document.activeElement === element
+    const isFocused = element => document.activeElement === element
 
 // Hide the sheet when pressing Escape if the target element
 // is not an input field
-window.addEventListener("keyup", (event) => {
-    const isSheetElementFocused =
-        sheet.contains(event.target) && isFocused(event.target)
+    window?.addEventListener("keyup", (event) => {
+        const isSheetElementFocused =
+            sheet.contains(event.target) && isFocused(event.target)
 
-    if (event.key === "Escape" && !isSheetElementFocused) {
-        setIsSheetShown(false)
+        if (event.key === "Escape" && !isSheetElementFocused) {
+            setIsSheetShown(false)
+        }
+    })
+
+    const touchPosition = (event) =>
+        event.touches ? event.touches[0] : event
+
+    let dragPosition
+
+    const onDragStart = (event) => {
+        dragPosition = touchPosition(event).pageY
+        sheetContents.classList.add("not-selectable")
+        //draggableArea.style.cursor = document.body.style.cursor = "grabbing"
     }
-})
 
-const touchPosition = (event) =>
-    event.touches ? event.touches[0] : event
+    const onDragMove = (event) => {
+        if (dragPosition === undefined) return
 
-let dragPosition
+        const y = touchPosition(event).pageY
+        const deltaY = dragPosition - y
+        const deltaHeight = deltaY / window.innerHeight * 100
 
-const onDragStart = (event) => {
-    dragPosition = touchPosition(event).pageY
-    sheetContents.classList.add("not-selectable")
-    draggableArea.style.cursor = document.body.style.cursor = "grabbing"
-}
-
-const onDragMove = (event) => {
-    if (dragPosition === undefined) return
-
-    const y = touchPosition(event).pageY
-    const deltaY = dragPosition - y
-    const deltaHeight = deltaY / window.innerHeight * 100
-
-    setSheetHeight(sheetHeight + deltaHeight)
-    dragPosition = y
-}
-
-const onDragEnd = () => {
-    dragPosition = undefined
-    sheetContents.classList.remove("not-selectable")
-    draggableArea.style.cursor = document.body.style.cursor = ""
-
-    if (sheetHeight < 25) {
-        setIsSheetShown(false)
-    }  else {
-        setSheetHeight(30)
+        setSheetHeight(sheetHeight + deltaHeight)
+        dragPosition = y
     }
-}
 
-draggableArea.addEventListener("mousedown", onDragStart)
-draggableArea.addEventListener("touchstart", onDragStart)
+    const onDragEnd = () => {
+        dragPosition = undefined
+        sheetContents.classList.remove("not-selectable")
+        //draggableArea.style.cursor = document.body.style.cursor = ""
 
-window.addEventListener("mousemove", onDragMove)
-window.addEventListener("touchmove", onDragMove)
+        if (sheetHeight < 25) {
+            setIsSheetShown(false)
+        }  else {
+            setSheetHeight(30)
+        }
+    }
 
-window.addEventListener("mouseup", onDragEnd)
-window.addEventListener("touchend", onDragEnd)
+    //draggableArea.addEventListener("mousedown", onDragStart)
+    //draggableArea.addEventListener("touchstart", onDragStart)
+
+    window?.addEventListener("mousemove", onDragMove)
+    window?.addEventListener("touchmove", onDragMove)
+
+    window?.addEventListener("mouseup", onDragEnd)
+    window?.addEventListener("touchend", onDragEnd)
+
+});

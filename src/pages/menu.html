@@ -1,0 +1,63 @@
+@@include('../static/header.html')
+@@include('../static/left-slide-menu.html')
+
+<div class="main flex">
+  <div class="mobile-screen mx-auto" >
+    <div class="ms-header border-b border-primary-100 border-solid sticky bg-white top-0 w-full z-10 px-3 py-2">
+      <div class="flex items-center justify-between">
+        <a href="/" class=" w-8 h-8 flex items-center justify-center bg-primary-600 rounded-xl ">
+          <i class="gg-chevron-left text-white " style=" --ggs: 1;"></i>
+        </a>
+        <div data-btn-ripple id="open-sheet" aria-controls="sheet" class="text-center cursor-pointer flex items-center text-gray-700 justify-center gap-1 px-2">
+          <h3 class="line-clamp-1"  >Menü 1 ergeg ıoehg ıoehgıoe h</h3>
+          <i class="gg-chevron-down-o text-primary-500" style="--ggs:.7;"></i>
+        </div>
+        <button type="button" data-btn-ripple class="open-left-slide-menu w-8 h-8 flex items-center justify-center bg-primary-600 rounded-xl">
+          <i class="gg-menu-left text-white" style=" --ggs: 1;"></i>
+        </button>
+      </div>
+
+    </div>
+    <div class="ms-main">
+
+      <div class="px-3 py-2">
+        <div class="swiper menu-list-swiper">
+          <div class="swiper-wrapper">
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+              @@include('../components/header-menu-list.html')
+            </div>
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+              @@include('../components/header-menu-list.html')
+            </div>
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+              @@include('../components/header-menu-list.html')
+            </div>
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+              @@include('../components/header-menu-list.html')
+            </div>
+          </div>
+          <div class="swiper-button-next shadow"></div>
+          <div class="swiper-button-prev shadow"></div>
+        </div>
+      </div>
+      <div  class="menu-list px-2 py-3">
+        <h3 class="text-xl font-semibold text-center text-gray-700">GLUTENSİZ ÜRÜNLER</h3>
+        <div class="flex flex-col gap-2 py-2">
+          @@include('../components/menu-list-card.html')
+          @@include('../components/menu-list-card.html')
+          @@include('../components/menu-list-card.html')
+          @@include('../components/menu-list-card.html')
+          @@include('../components/menu-list-card.html')
+          @@include('../components/menu-list-card.html')
+        </div>
+      </div>
+
+    </div>
+    @@include('../components/sheet-menu.html')
+  </div>
+  @@include('../components/home-right.html')
+</div>
+
+@@include('../static/footer.html')
+
+

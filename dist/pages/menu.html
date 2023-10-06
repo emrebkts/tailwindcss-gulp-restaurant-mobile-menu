@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Backhaus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <link href="/css/plugins/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
+
+
+
+    <link href="https://css.gg/css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="/js/jquery-3.6.3.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js" ></script>
+
+    <script src="/js/plugins/swiper-bundle.min.js"></script>
+
+    <script src="/js/app.js"></script>
+
+</head>
+<body>
+
+
+<div class="slide-menu">
+    <div class="flex justify-between items-center py-2 px-3">
+        <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Menu</h5>
+        <button type="button" data-btn-ripple class="slide-close-button  w-8 h-8 flex items-center justify-center bg-gray-600/10 rounded-xl">
+            <i class="gg-close text-gray-800" style=" --ggs: 1;"></i>
+        </button>
+    </div>
+    <div class="flex flex-col px-2 mt-1">
+        <button class="px-3 py-2.5 hover:bg-gray-100 rounded-xl text-left text-base">Dil Seç</button>
+        <a href="/pages/feedback.html" class="px-3 py-2.5 hover:bg-gray-100 rounded-xl text-left text-base">Geri Bildirim Gönder</a>
+        <button class="px-3 py-2.5 hover:bg-gray-100 rounded-xl text-left text-base">Restoranı Ara</button>
+        <hr class="my-1" />
+        <button class="px-3 py-2.5 hover:bg-gray-100 rounded-xl text-left text-base">Giriş Yap</button>
+
+    </div>
+
+</div>
+
+<div class="slider-overlay"></div>
+
+<div class="main flex">
+  <div class="mobile-screen mx-auto" >
+    <div class="ms-header border-b border-primary-100 border-solid sticky bg-white top-0 w-full z-10 px-3 py-2">
+      <div class="flex items-center justify-between">
+        <a href="/" class=" w-8 h-8 flex items-center justify-center bg-primary-600 rounded-xl ">
+          <i class="gg-chevron-left text-white " style=" --ggs: 1;"></i>
+        </a>
+        <div data-btn-ripple id="open-sheet" aria-controls="sheet" class="text-center cursor-pointer flex items-center text-gray-700 justify-center gap-1 px-2">
+          <h3 class="line-clamp-1"  >Menü 1 ergeg ıoehg ıoehgıoe h</h3>
+          <i class="gg-chevron-down-o text-primary-500" style="--ggs:.7;"></i>
+        </div>
+        <button type="button" data-btn-ripple class="open-left-slide-menu w-8 h-8 flex items-center justify-center bg-primary-600 rounded-xl">
+          <i class="gg-menu-left text-white" style=" --ggs: 1;"></i>
+        </button>
+      </div>
+
+    </div>
+    <div class="ms-main">
+
+      <div class="px-3 py-2">
+        <div class="swiper menu-list-swiper">
+          <div class="swiper-wrapper">
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+              <div class="flex flex-col gap-2 w-full aspect-video">
+    <img
+            src="https://backhaus.com.tr/img/cms/kategoriler/top-menu-4/glutensiz-top-5.jpg"
+            class="aspect-video rounded-xl w-full overflow-hidden"
+            alt="">
+    <h3 class="font-semibold text-gray-700">Glutensiz Ürünler</h3>
+</div>
+            </div>
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+              <div class="flex flex-col gap-2 w-full aspect-video">
+    <img
+            src="https://backhaus.com.tr/img/cms/kategoriler/top-menu-4/glutensiz-top-5.jpg"
+            class="aspect-video rounded-xl w-full overflow-hidden"
+            alt="">
+    <h3 class="font-semibold text-gray-700">Glutensiz Ürünler</h3>
+</div>
+            </div>
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+              <div class="flex flex-col gap-2 w-full aspect-video">
+    <img
+            src="https://backhaus.com.tr/img/cms/kategoriler/top-menu-4/glutensiz-top-5.jpg"
+            class="aspect-video rounded-xl w-full overflow-hidden"
+            alt="">
+    <h3 class="font-semibold text-gray-700">Glutensiz Ürünler</h3>
+</div>
+            </div>
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+              <div class="flex flex-col gap-2 w-full aspect-video">
+    <img
+            src="https://backhaus.com.tr/img/cms/kategoriler/top-menu-4/glutensiz-top-5.jpg"
+            class="aspect-video rounded-xl w-full overflow-hidden"
+            alt="">
+    <h3 class="font-semibold text-gray-700">Glutensiz Ürünler</h3>
+</div>
+            </div>
+          </div>
+          <div class="swiper-button-next shadow"></div>
+          <div class="swiper-button-prev shadow"></div>
+        </div>
+      </div>
+      <div  class="menu-list px-2 py-3">
+        <h3 class="text-xl font-semibold text-center text-gray-700">GLUTENSİZ ÜRÜNLER</h3>
+        <div class="flex flex-col gap-2 py-2">
+          <div data-btn-ripple class="bg-white shadow rounded-xl py-3  px-3 flex items-center justify-center" >
+    <div  class="flex flex-col flex-1 gap-1">
+
+        <h2 class="font-medium text-gray-800">Glutensiz Tatlı Kurupastalar</h2>
+        <p class="text-sm text-gray-600">Her gün taptaze üretilen kuru pastalarımız toplantılarınıza, davetlerine renk ve lezzet katıyor.</p>
+        <span class="text-primary-500 font-medium">600,00 TL</span>
+
+    </div>
+    <div class="w-24">
+        <img
+            class="w-24 rounded-xl"
+            src="https://backhaus.com.tr/914-home_default_pizza/glutensiz-tatli-kurupastalar.jpg"
+            alt=""
+        />
+    </div>
+</div>
+          <div data-btn-ripple class="bg-white shadow rounded-xl py-3  px-3 flex items-center justify-center" >
+    <div  class="flex flex-col flex-1 gap-1">
+
+        <h2 class="font-medium text-gray-800">Glutensiz Tatlı Kurupastalar</h2>
+        <p class="text-sm text-gray-600">Her gün taptaze üretilen kuru pastalarımız toplantılarınıza, davetlerine renk ve lezzet katıyor.</p>
+        <span class="text-primary-500 font-medium">600,00 TL</span>
+
+    </div>
+    <div class="w-24">
+        <img
+            class="w-24 rounded-xl"
+            src="https://backhaus.com.tr/914-home_default_pizza/glutensiz-tatli-kurupastalar.jpg"
+            alt=""
+        />
+    </div>
+</div>
+          <div data-btn-ripple class="bg-white shadow rounded-xl py-3  px-3 flex items-center justify-center" >
+    <div  class="flex flex-col flex-1 gap-1">
+
+        <h2 class="font-medium text-gray-800">Glutensiz Tatlı Kurupastalar</h2>
+        <p class="text-sm text-gray-600">Her gün taptaze üretilen kuru pastalarımız toplantılarınıza, davetlerine renk ve lezzet katıyor.</p>
+        <span class="text-primary-500 font-medium">600,00 TL</span>
+
+    </div>
+    <div class="w-24">
+        <img
+            class="w-24 rounded-xl"
+            src="https://backhaus.com.tr/914-home_default_pizza/glutensiz-tatli-kurupastalar.jpg"
+            alt=""
+        />
+    </div>
+</div>
+          <div data-btn-ripple class="bg-white shadow rounded-xl py-3  px-3 flex items-center justify-center" >
+    <div  class="flex flex-col flex-1 gap-1">
+
+        <h2 class="font-medium text-gray-800">Glutensiz Tatlı Kurupastalar</h2>
+        <p class="text-sm text-gray-600">Her gün taptaze üretilen kuru pastalarımız toplantılarınıza, davetlerine renk ve lezzet katıyor.</p>
+        <span class="text-primary-500 font-medium">600,00 TL</span>
+
+    </div>
+    <div class="w-24">
+        <img
+            class="w-24 rounded-xl"
+            src="https://backhaus.com.tr/914-home_default_pizza/glutensiz-tatli-kurupastalar.jpg"
+            alt=""
+        />
+    </div>
+</div>
+          <div data-btn-ripple class="bg-white shadow rounded-xl py-3  px-3 flex items-center justify-center" >
+    <div  class="flex flex-col flex-1 gap-1">
+
+        <h2 class="font-medium text-gray-800">Glutensiz Tatlı Kurupastalar</h2>
+        <p class="text-sm text-gray-600">Her gün taptaze üretilen kuru pastalarımız toplantılarınıza, davetlerine renk ve lezzet katıyor.</p>
+        <span class="text-primary-500 font-medium">600,00 TL</span>
+
+    </div>
+    <div class="w-24">
+        <img
+            class="w-24 rounded-xl"
+            src="https://backhaus.com.tr/914-home_default_pizza/glutensiz-tatli-kurupastalar.jpg"
+            alt=""
+        />
+    </div>
+</div>
+          <div data-btn-ripple class="bg-white shadow rounded-xl py-3  px-3 flex items-center justify-center" >
+    <div  class="flex flex-col flex-1 gap-1">
+
+        <h2 class="font-medium text-gray-800">Glutensiz Tatlı Kurupastalar</h2>
+        <p class="text-sm text-gray-600">Her gün taptaze üretilen kuru pastalarımız toplantılarınıza, davetlerine renk ve lezzet katıyor.</p>
+        <span class="text-primary-500 font-medium">600,00 TL</span>
+
+    </div>
+    <div class="w-24">
+        <img
+            class="w-24 rounded-xl"
+            src="https://backhaus.com.tr/914-home_default_pizza/glutensiz-tatli-kurupastalar.jpg"
+            alt=""
+        />
+    </div>
+</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-sheet-menu fixed top-0 left-0 w-screen overflow-hidden">
+  <div id="sheet" class="sheet z-50"  aria-hidden="true" role="dialog">
+    <div class="overlay"></div>
+    <div class="contents" style="height: auto">
+      <header class="controls d-flex align-items-center w-100 justify-content-center py-3 border-solid border-b border-primary-100 position-relative">
+        <h6 class="text-center">Menü</h6>
+        <button type="button"   class="close-sheet absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex align-items-center justify-content-center">
+          <i class="gg-close" style=" --ggs: 1;"></i>
+        </button>
+      </header>
+      <main class="body">
+        <div class="list-group py-2">
+          <a href="/pages/menu.html" class="list-group-item list-group-item-action flex items-center justify-center gap-3 py-3" aria-current="true">
+            <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+              <div>
+                <h6 class="mb-0 text-secondary text-lg font-semibold">Menü 1</h6>
+              </div>
+              <i class="gg-chevron-right text-secondary" style=" --ggs: 1;"></i>
+            </div>
+          </a>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<link href="/css/plugins/bottom-sheet-main.css" rel="stylesheet">
+<script src="/js/plugins/bottom-sheet-main.js"></script>
+
+  </div>
+  <div class="flex-1 h-screen  items-center justify-center hidden lg:flex">
+  <h1 class="text-6xl font-semibold text-gray-700">BackHaus</h1>
+</div>
+</div>
+
+<script>
+    const swiper = new Swiper(".menu-list-swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+
+</body>
+</html>
+
+
