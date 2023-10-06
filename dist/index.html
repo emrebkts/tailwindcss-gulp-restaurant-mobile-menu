@@ -34,9 +34,15 @@
 
 <div class="main flex">
     <div class="mobile-screen mx-auto overflow-hidden ms-back" >
-        <div class="py-4 px-4 flex w-full items-center justify-center">
-            <h4 class="font-bold text-2xl text-white">Menüyü görmek için tıklayınız</h4>
-
+        <div class="py-4 px-4 gap-2 h-full flex flex-col w-full items-center justify-center">
+            <button data-btn-ripple type="button" data-bs-toggle="modal" data-bs-target="#menuModal" class="z-20 font-bold text-xl text-white py-2 px-2 w-full bg-primary-700/60 backdrop-blur rounded-xl">
+                Menüyü görmek için tıklayınız
+            </button>
+            <select class="form-select select-white-icon text-white font-semibold py-2 z-20 w-75 bg-primary-700/80 backdrop-blur">
+                <option>Dil Seç</option>
+                <option>Türkçe</option>
+                <option>İngilizce</option>
+            </select>
         </div>
         <div class="absolute top-0 left-0 w-100 h-100 z-10" data-bs-toggle="modal" data-bs-target="#menuModal"></div>
     </div>
