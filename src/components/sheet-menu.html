@@ -1,29 +1,29 @@
-<div class="bottom-sheet-menu fixed top-0 left-0 w-screen overflow-hidden">
-  <div id="sheet" class="sheet z-50"  aria-hidden="true" role="dialog">
-    <div class="overlay"></div>
-    <div class="contents" style="height: auto">
-      <header class="controls d-flex align-items-center w-100 justify-content-center py-3 border-solid border-b border-primary-100 position-relative">
-        <h6 class="text-center">Menü</h6>
-        <button type="button"   class="close-sheet absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex align-items-center justify-content-center">
-          <i class="gg-close" style=" --ggs: 1;"></i>
-        </button>
-      </header>
-      <main class="body">
-        <div class="list-group py-2">
-          <a href="/pages/menu.html" class="list-group-item list-group-item-action flex items-center justify-center gap-3 py-3" aria-current="true">
-            <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
-              <div>
-                <h6 class="mb-0 text-secondary text-lg font-semibold">Menü 1</h6>
+<div class="modal fade" id="menuModal" tabindex="-1"
+     aria-labelledby="menuModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="contents" style="height: auto">
+        <header class="controls d-flex align-items-center w-100 justify-content-center py-3 border-solid border-b border-primary-100 position-relative">
+          <h6 class="text-center">Menü</h6>
+          <button type="button"  data-bs-dismiss="modal" class="close-sheet absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex align-items-center justify-content-center">
+            <i class="gg-close" style=" --ggs: 1;"></i>
+          </button>
+        </header>
+        <main class="body">
+          <div class="list-group py-2">
+            <a href="/pages/menu.html" class="list-group-item list-group-item-action flex items-center justify-center gap-3 py-3" aria-current="true">
+              <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0 text-secondary text-lg font-semibold">Menü 1</h6>
+                </div>
+                <i class="gg-chevron-right text-secondary" style=" --ggs: 1;"></i>
               </div>
-              <i class="gg-chevron-right text-secondary" style=" --ggs: 1;"></i>
-            </div>
-          </a>
+            </a>
 
-        </div>
-      </main>
+          </div>
+        </main>
+      </div>
     </div>
   </div>
 </div>
-
-<link href="/css/plugins/bottom-sheet-main.css" rel="stylesheet">
-<script src="/js/plugins/bottom-sheet-main.js"></script>

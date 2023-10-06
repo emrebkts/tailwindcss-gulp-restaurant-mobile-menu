@@ -4,15 +4,17 @@
     <div class="mobile-screen mx-auto overflow-hidden ms-back" >
         <div class="py-4 px-4 flex w-full items-center justify-center">
             <h4 class="font-bold text-2xl text-white">Menüyü görmek için tıklayınız</h4>
+
         </div>
-        <div class="absolute top-0 left-0 w-100 h-100 z-10" id="open-sheet" aria-controls="sheet"></div>
-        @@include('components/sheet-menu.html')
+        <div class="absolute top-0 left-0 w-100 h-100 z-10" data-bs-toggle="modal" data-bs-target="#menuModal"></div>
     </div>
     <div class="flex-1 h-screen  items-center justify-center hidden lg:flex">
         <h1 class="text-6xl font-semibold text-gray-700">BackHaus</h1>
     </div>
+
 </div>
 
 @@include('static/footer.html')
+@@include('components/sheet-menu.html')
 
 

@@ -10,7 +10,6 @@ $(document).ready(function () {
 
     $(".btn_ , [data-btn-ripple]")
         .on("mousedown touchstart", function () {
-            console.log("emre");
             $(this).css('transform', 'scale(0.95)');
         })
         .on("mouseup touchend", function () {
