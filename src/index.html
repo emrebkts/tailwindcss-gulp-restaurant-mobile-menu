@@ -1,0 +1,35 @@
+@@include('static/header.html')
+
+<div class="main">
+    <div class="mobile-screen" >
+        <div class="absolute w-100 h-100" id="open-sheet" aria-controls="sheet"></div>
+        <div id="sheet" class="sheet" aria-hidden="false" role="dialog">
+            <div class="overlay"></div>
+            <div class="contents" style="height: auto">
+                <header class="controls d-flex align-items-center w-100 justify-content-center py-3 border-b  position-relative">
+                    <h6 class="text-center">Menü</h6>
+                    <button type="button"  class="close-sheet absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex align-items-center justify-content-center">
+                        <i class="gg-close" style=" --ggs: 1;"></i>
+                    </button>
+                </header>
+                <main class="body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                            <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 text-secondary fs-6">ALTERNATİF BESLENENLER İÇİN (GLUTENSİZ, VEGAN, RAFİNE ŞEKERSİZ)</h6>
+                                </div>
+                                <small class="opacity-50 text-nowrap">now</small>
+                            </div>
+                        </a>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@@include('static/footer.html')
+
+
