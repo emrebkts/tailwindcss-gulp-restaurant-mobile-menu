@@ -8,6 +8,14 @@
     @apply sm:border-x sm:border-solid sm:border-primary-100;
 }
 
+.active-menu-list-item{
+    @apply border-2 border-solid border-primary-300 rounded-xl overflow-hidden;
+}
+.active-menu-list-item h3{
+
+    @apply text-primary-600;
+}
+
 .btn_{
 
     --btn-background: theme("colors.gray.200");

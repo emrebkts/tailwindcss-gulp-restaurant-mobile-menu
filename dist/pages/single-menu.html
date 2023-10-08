@@ -32,8 +32,8 @@
 
 
 
-<div class="main flex">
-    <div class="mobile-screen relative mx-auto">
+<div class="main  flex">
+    <div class="mobile-screen relative mx-auto ">
         <div class="ms-header border-solid sticky top-0 w-full z-20 px-3 py-2 h-[65px]">
             <a class=" w-10 h-10 shadow-xl flex items-center justify-center bg-primary-600 rounded-xl  " data-btn-ripple
                href="/pages/menu.html">
@@ -41,9 +41,9 @@
             </a>
 
         </div>
-        <div class="ms-main">
+        <div class="ms-main overflow-hidden">
 
-            <div class="fixed w-full lg:left-0 left-1/2 transform -translate-x-1/2 lg:transform-none top-0 max-w-[var(--max-mobile-width)] ">
+            <div class="fixed w-full overflow-hidden lg:left-0 left-1/2 transform -translate-x-1/2 lg:transform-none top-0 max-w-[var(--max-mobile-width)] ">
                 <img
                         alt=""
                         class="aspect-square object-cover mx-auto object-center	 sm-image w-full"
@@ -52,6 +52,9 @@
             </div>
 
             <div class="sm-body flex flex-col gap-1 px-3 py-3 z-10 relative bg-white rounded-2xl shadow-xl min-h-screen">
+                <span>
+                    <a href="#" class="uppercase font-medium text-gray-500 tracking-tight text-sm hover:underline">Glutensiz Ürünler</a>
+                </span>
                 <span class="text-primary-600 text-2xl font-bold">600 TL <small
                         class="text-sm font-medium text-gray-400">/ KG</small></span>
                 <h2 class="text-xl text-gray-700 font-semibold">Glutensiz Tatlı Kurupastalar</h2>
@@ -63,8 +66,6 @@
 
             <script>
                 let imageWidth = $(".sm-image").height();
-
-
                 function setSingleMenuMainMargin() {
                     imageWidth = $(".sm-image").height();
                     $(".sm-body").css({
@@ -79,17 +80,6 @@
                     setSingleMenuMainMargin()
                 })
 
-
-                function convertPercentageToValue(percentage) {
-                    // Yüzdeyi 0 ile 1 arasında bir orana dönüştürün
-                    const ratio = percentage / 100;
-
-                    // 1 ile 1.5 arasındaki değeri hesaplayın
-                    const value = 1 + (0.5 * ratio);
-
-                    return value;
-                }
-
                 $(window).scroll(function (e) {
 
                     const scrollTop = $(this).scrollTop();
@@ -102,22 +92,13 @@
                         menuMainScrollPerctange = 1;
                     }
 
-
-                    // 1.5 100
-                    // x 80
-                    // 1 0
-
-
-                    // 0 1
-                    // 100 x
-
-
                     let filterBrightness = ((100 / menuMainScrollPerctange) * .09);
                     if (filterBrightness > 1) {
                         filterBrightness = 1;
                     }
 
                     const imageScale = 1 + (0.5 * (menuMainScrollPerctange / 100));
+
                     $(".sm-image").css({
                         filter: "brightness(" + filterBrightness + ")",
                         transform: "scale(" + imageScale + ")"

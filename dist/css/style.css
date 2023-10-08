@@ -600,6 +600,10 @@ video {
   left: 0px;
 }
 
+.left-1\/2 {
+  left: 50%;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -610,14 +614,6 @@ video {
 
 .top-1\/2 {
   top: 50%;
-}
-
-.left-1\/3 {
-  left: 33.333333%;
-}
-
-.left-1\/2 {
-  left: 50%;
 }
 
 .z-10 {
@@ -747,10 +743,6 @@ video {
 
 .max-w-\[10rem\] {
   max-width: 10rem;
-}
-
-.max-w-\[var\(--max-mobile-height\)\] {
-  max-width: var(--max-mobile-height);
 }
 
 .max-w-\[var\(--max-mobile-width\)\] {
@@ -890,6 +882,11 @@ video {
      object-position: center;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -979,6 +976,10 @@ video {
   text-transform: uppercase;
 }
 
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
@@ -1061,6 +1062,20 @@ video {
   }
 }
 
+.active-menu-list-item {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(217 190 92 / var(--tw-border-opacity));
+}
+
+.active-menu-list-item h3 {
+  --tw-text-opacity: 1;
+  color: rgb(179 118 44 / var(--tw-text-opacity));
+}
+
 .btn_{
   --btn-background: #e5e7eb;
   --btn-color: #222;
@@ -1108,32 +1123,13 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 :is(.dark .dark\:text-gray-400) {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-@media (min-width: 768px) {
-  .md\:left-1\/2 {
-    left: 50%;
-  }
-
-  .md\:left-0 {
-    left: 0px;
-  }
-
-  .md\:-translate-x-1\/2 {
-    --tw-translate-x: -50%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .md\:transform {
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .md\:transform-none {
-    transform: none;
-  }
 }
 
 @media (min-width: 1024px) {
