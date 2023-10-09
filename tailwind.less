@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 
 :root {
   --primary: #d9be5c;
@@ -26,7 +32,7 @@
 body {
   font-size: 14px;
   --bs-border-color: var(--text-gray-300);
-  line-height: 1.5;
+  line-height: 1.3;
   height: 100vh;
   background: var(--background);
   color: var(--foreground);
@@ -37,6 +43,7 @@ html, body {
   height: 100%;
   font-family: "Inter", sans-serif;
   overflow: hidden;
+
 }
 
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
@@ -47,31 +54,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   vertical-align: baseline
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block
-}
 
-body {
-  line-height: 1
-}
-
-ol, ul {
-  list-style: none
-}
-
-blockquote, q {
-  quotes: none
-}
-
-blockquote:after, blockquote:before, q:after, q:before {
-  content: '';
-  content: none
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0
-}
 
 .right-screen .rs-back{
   background-color: var(--primary);
@@ -96,6 +79,84 @@ table {
     background-size: cover;
   }
 }
+
+.active-menu-list-item {
+@apply border-2 border-solid border-primary-300 rounded-xl overflow-hidden;
+}
+
+.active-menu-list-item h3 {
+  @apply text-primary-600;
+}
+
+.btn_ {
+    --btn-background: theme("colors.gray.200");
+    --btn-hover-bg: theme("colors.gray.100");
+    --btn-color: #222;
+
+    background: var(--btn-background);
+    color: var(--btn-color);
+
+    @apply px-4 py-3 rounded-xl inline-flex items-center justify-center transition-all;
+
+    &.btn_primary {
+        --btn-background: theme("colors.primary.600");
+        --btn-color: theme("colors.white");
+    }
+    &.btn_transparent {
+    --btn-background: transparent;
+    --btn-color: theme("colors.gray.800");
+
+        &:hover {
+          background: var(--btn-hover-bg);
+        }
+    }
+
+    &.btn_bho {
+        @apply text-primary-600 border-2 bg-transparent border-primary-600 border-solid rounded-full;
+    }
+    &.btn-text-right{
+      @apply text-right justify-end;
+    }
+    &.btn-text-left{
+      @apply text-left justify-start;
+    }
+    &.btn-full{
+      @apply w-full;
+    }
+    &.btn_right_chevron {
+      &:after{
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        content: "";
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-size: 1.25rem;
+        transition: transform 0.2s ease-in-out;
+        @apply rotate-180;
+      }
+    }
+    &.collapsed{
+      &.btn_right_chevron {
+        &:after{
+          @apply rotate-0;
+        }
+      }
+    }
+}
+
+
+
+.btn-check:checked + .btn_ {
+    @apply bg-primary-600 text-white border-transparent;
+}
+
+.collapse {
+  visibility: unset !important;
+}
+
+
 
 .menu-list-swiper {
   width: 100%;
@@ -171,4 +232,52 @@ table {
 
 .select-white-icon {
   --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.whatsapp-icon{
+  background-image: url("/images/icons/whatsapp.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.tr-flag-svg{
+  &:before{
+    content :"";
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background-image: url("/images/flags/tr.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.en-flag-svg{
+  &:before{
+    content :"";
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background-image: url("/images/flags/en.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.ar-flag-svg{
+  &:before{
+    content :"";
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background-image: url("/images/flags/ar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.lang-label{
+  filter:brightness(.7);
+  @apply border-4  transition transition-all border-solid border-transparent text-center flex items-center justify-center  p-3 rounded-xl bg-primary-700/70 backdrop-blur cursor-pointer gap-2;
+}
+.check-radio-lang:checked + .lang-label{
+  filter:brightness(1);
+  @apply  border-primary-600;
 }
