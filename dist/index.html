@@ -38,17 +38,32 @@
             <button data-btn-ripple type="button" data-bs-toggle="modal" data-bs-target="#menuModal" class="z-20 font-bold text-xl text-white py-3 px-2 w-full bg-primary-700/60 backdrop-blur rounded-xl">
                 Menüyü görmek için tıklayınız
             </button>
-            <select class="form-select select-white-icon text-white font-semibold py-3 rounded-xl z-20 w-75 bg-primary-700/80 backdrop-blur">
-                <option>Dil Seç</option>
-                <option>Türkçe</option>
-                <option>İngilizce</option>
-            </select>
+            <div class="grid grid-cols-2 w-full gap-1 relative z-50">
+                <label for="lang_tr" class="flex items-center peer-checked:bg-red-600 p-3 rounded-xl bg-primary-700/80 backdrop-blur cursor-pointer gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" name="lang_Select"
+                           id="lang_tr" value="" checked="">
+                    <span class="text-white font-semibold">Türkçe</span>
+                </label>
+                <label for="lang_en" class="flex items-center peer-checked:bg-red-600 p-3 rounded-xl bg-primary-700/80 backdrop-blur cursor-pointer gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" name="lang_Select"
+                           id="lang_en" value="" checked="">
+                    <span class="text-white font-semibold">English</span>
+                </label>
+                <label for="lang_an" class="flex items-center peer-checked:bg-red-600 p-3 rounded-xl bg-primary-700/80 backdrop-blur cursor-pointer gap-2">
+                    <input class="form-check-input flex-shrink-0" type="radio" name="lang_Select"
+                           id="lang_an" value="" checked="">
+                    <span class="text-white font-semibold">Arabic</span>
+                </label>
+            </div>
         </div>
         <div class="absolute top-0 left-0 w-100 h-100 z-10" data-bs-toggle="modal" data-bs-target="#menuModal"></div>
     </div>
-    <div class="flex-1 h-screen  items-center justify-center hidden lg:flex">
-        <h1 class="text-6xl font-semibold text-gray-700">BackHaus</h1>
-    </div>
+
+    <div class="flex-1 flex flex-col h-screen right-screen items-center justify-center hidden lg:flex relative">
+  <div class="rs-back absolute top-0 left-0 w-full h-full z-[-1]"></div>
+  <h1 class="text-6xl font-bold text-white">BackHaus</h1>
+  <span class="text-sm text-gray-400">İstanbul'un her yerinde, lezzetlerimiz adresinize teslim.</span>
+</div>
 
 </div>
 

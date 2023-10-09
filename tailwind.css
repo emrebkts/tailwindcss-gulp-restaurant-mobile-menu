@@ -4,10 +4,6 @@
 
 
 
-.mobile-screen{
-    @apply sm:border-x sm:border-solid sm:border-primary-100;
-}
-
 .active-menu-list-item{
     @apply border-2 border-solid border-primary-300 rounded-xl overflow-hidden;
 }
