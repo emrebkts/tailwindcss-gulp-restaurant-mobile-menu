@@ -35,9 +35,9 @@
 <div class="main flex">
     <div class="mobile-screen mx-auto overflow-hidden ms-back" >
         <div class="py-4 px-4 gap-2 h-full flex flex-col w-full items-center justify-center">
-            <button data-btn-ripple type="button" data-bs-toggle="modal" data-bs-target="#menuModal" class="z-20 font-bold text-xl text-white py-3 px-2 w-full bg-primary-700/70 backdrop-blur rounded-xl">
+            <a href="/pages/menu.html" data-btn-ripple  class="text-center font-bold text-xl text-white py-3 px-2 w-full bg-primary-700/70 backdrop-blur rounded-xl">
                 Menüyü görmek için tıklayınız
-            </button>
+            </a>
 
             <div class="grid grid-cols-2  w-full gap-1 relative z-50">
 
@@ -68,7 +68,6 @@
                 </div>
             </div>
         </div>
-        <div class="absolute top-0 left-0 w-100 h-100 z-10" data-bs-toggle="modal" data-bs-target="#menuModal"></div>
     </div>
 
     <div class="flex-1 flex flex-col h-screen right-screen items-center justify-center hidden lg:flex relative">
@@ -93,34 +92,5 @@
 
 </body>
 </html>
-<div class="modal fade" id="menuModal" tabindex="-1"
-     aria-labelledby="menuModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="contents" style="height: auto">
-        <header class="controls d-flex align-items-center w-100 justify-content-center py-3 border-solid border-b border-primary-100 position-relative">
-          <h6 class="text-center">Menü</h6>
-          <button type="button"  data-bs-dismiss="modal" class="close-sheet absolute top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex align-items-center justify-content-center">
-            <i class="gg-close" style=" --ggs: 1;"></i>
-          </button>
-        </header>
-        <main class="body">
-          <div class="list-group py-2">
-            <a href="/pages/menu.html" class="list-group-item list-group-item-action flex items-center justify-center gap-3 py-3" aria-current="true">
-              <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
-                <div>
-                  <h6 class="mb-0 text-secondary text-lg font-semibold">Menü 1</h6>
-                </div>
-                <i class="gg-chevron-right text-secondary" style=" --ggs: 1;"></i>
-              </div>
-            </a>
-
-          </div>
-        </main>
-      </div>
-    </div>
-  </div>
-</div>
 
 

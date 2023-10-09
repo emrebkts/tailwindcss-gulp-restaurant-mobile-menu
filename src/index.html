@@ -3,9 +3,9 @@
 <div class="main flex">
     <div class="mobile-screen mx-auto overflow-hidden ms-back" >
         <div class="py-4 px-4 gap-2 h-full flex flex-col w-full items-center justify-center">
-            <button data-btn-ripple type="button" data-bs-toggle="modal" data-bs-target="#menuModal" class="z-20 font-bold text-xl text-white py-3 px-2 w-full bg-primary-700/70 backdrop-blur rounded-xl">
+            <a href="/pages/menu.html" data-btn-ripple  class="text-center font-bold text-xl text-white py-3 px-2 w-full bg-primary-700/70 backdrop-blur rounded-xl">
                 Menüyü görmek için tıklayınız
-            </button>
+            </a>
 
             <div class="grid grid-cols-2  w-full gap-1 relative z-50">
 
@@ -36,7 +36,6 @@
                 </div>
             </div>
         </div>
-        <div class="absolute top-0 left-0 w-100 h-100 z-10" data-bs-toggle="modal" data-bs-target="#menuModal"></div>
     </div>
 
     @@include('components/home-right.html')
@@ -44,6 +43,5 @@
 </div>
 
 @@include('static/footer.html')
-@@include('components/sheet-menu.html')
 
 
