@@ -11,7 +11,7 @@
         </div>
         <div class="ms-main overflow-hidden">
 
-            <div class="fixed w-full overflow-hidden lg:left-0 left-1/2 transform -translate-x-1/2 lg:transform-none top-0 max-w-[var(--max-mobile-width)] ">
+            <div class="fixed z-[-1] w-full overflow-hidden lg:left-0 left-1/2 transform -translate-x-1/2 lg:transform-none top-0 max-w-[var(--max-mobile-width)] ">
                 <img
                         alt=""
                         class="aspect-square object-cover mx-auto object-center	 sm-image w-full"
@@ -42,13 +42,14 @@
 
                 }
 
+
                 setSingleMenuMainMargin()
 
-                $(window).resize(function () {
+                $(".mobile-screen").resize(function () {
                     setSingleMenuMainMargin()
                 })
 
-                $(window).scroll(function (e) {
+                $(".mobile-screen").scroll(function (e) {
 
                     const scrollTop = $(this).scrollTop();
                     let menuMainScrollPerctange = scrollTop * 100 / imageWidth;

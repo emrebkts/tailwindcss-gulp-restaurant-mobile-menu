@@ -29,6 +29,7 @@ html,
 body {
   height: 100%;
   font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 a,
 abbr,
@@ -164,6 +165,7 @@ table {
   max-width: var(--max-mobile-width);
   width: 100%;
   height: 100vh;
+  overflow-x: auto;
   position: relative;
 }
 .mobile-screen.ms-back {
