@@ -17,62 +17,36 @@
             <form action="#">
                 <div class="px-4 py-2 flex flex-col gap-4">
 
-                    <div class="flex flex-col gap-2">
-                        <h5 class="text-center text-gray-700">Restorantımızı ilk defa mı ziyaret ediyorsunuz?</h5>
-                        <div class="flex justify-center gap-2">
-                            <input autocomplete="off" checked class="btn-check" id="btn_1" name="options-base"
-                                   type="radio">
-                            <label class="btn_ btn_bho" for="btn_1">Evet</label>
+                    <div class="flex flex-col gap-3">
 
-                            <input autocomplete="off" class="btn-check" id="btn_2" name="options-base" type="radio">
-                            <label class="btn_ btn_bho" for="btn_2">Hayır</label>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <h5 class="text-center text-gray-700">Genel memnuniyetiniz nasıl?</h5>
-                        <div class="flex justify-center gap-2">
-                            <div class="flex items-center space-x-1">
-                                <svg aria-hidden="true" class="w-8 h-8 text-primary-600"
-                                     fill="currentColor" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                                </svg>
-                                <svg aria-hidden="true" class="w-8 h-8 text-primary-600"
-                                     fill="currentColor" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                                </svg>
-                                <svg aria-hidden="true" class="w-8 h-8 text-primary-600"
-                                     fill="currentColor" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                                </svg>
-                                <svg aria-hidden="true" class="w-8 h-8 text-primary-600"
-                                     fill="currentColor" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                                </svg>
-                                <svg aria-hidden="true" class="w-8 h-8 text-gray-300" fill="currentColor"
-                                     viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                                </svg>
+                        <input class="input_" placeholder="Ad Soyad" type="text"/>
+                        <input class="input_" placeholder="E-posta Adresi" type="text"/>
+                        <div class="flex flex-col gap-2">
+                            <h5 class="text-center text-gray-700">Genel memnuniyetiniz nasıl?</h5>
+                            <div class="flex justify-center gap-2">
+                                <input name="rating" type="hidden" class="rating_val" />
+                                <div class="rating" data-input-class=".rating_val">
+                                    <span class="star" data-rating="5"></span>
+                                    <span class="star" data-rating="4"></span>
+                                    <span class="star" data-rating="3"></span>
+                                    <span class="star" data-rating="2"></span>
+                                    <span class="star" data-rating="1"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <h5 class="text-center text-gray-700">Tekrar ziyaret etmeyi düşünür müsünüz?</h5>
-                        <div class="flex justify-center gap-2">
-                            <input autocomplete="off" checked class="btn-check" id="btn_3" name="options-base"
-                                   type="radio">
-                            <label class="btn_ btn_bho" for="btn_3">Evet</label>
-
-                            <input autocomplete="off" class="btn-check" id="btn_4" name="options-base" type="radio">
-                            <label class="btn_ btn_bho" for="btn_4">Hayır</label>
-                        </div>
-                    </div>
-                    <button class="btn_">Gönder</button>
+                    <textarea class="input_ resize-none" placeholder="Bizimle paylaşmak istediğiniz  bir konu var mı?"
+                              rows="4"
+                              type="text"></textarea>
 
                 </div>
-            </form>
+
+                <button class="btn_">Gönder</button>
+
         </div>
+        </form>
     </div>
-    @@include('../components/home-right.html')
+</div>
+@@include('../components/home-right.html')
 </div>
 
 @@include('../static/footer.html')
