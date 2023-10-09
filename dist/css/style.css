@@ -636,6 +636,10 @@ video {
   z-index: -1;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -886,6 +890,10 @@ video {
   border-color: rgb(244 238 209 / var(--tw-border-opacity));
 }
 
+.\!bg-primary-700\/70 {
+  background-color: rgb(149 89 40 / 0.7) !important;
+}
+
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -911,6 +919,10 @@ video {
 
 .bg-white\/60 {
   background-color: rgb(255 255 255 / 0.6);
+}
+
+.\!bg-primary-700\/80 {
+  background-color: rgb(149 89 40 / 0.8) !important;
 }
 
 .object-cover {
@@ -1057,6 +1069,11 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.text-primary-200 {
+  --tw-text-opacity: 1;
+  color: rgb(232 219 159 / var(--tw-text-opacity));
+}
+
 .text-primary-500 {
   --tw-text-opacity: 1;
   color: rgb(203 150 53 / var(--tw-text-opacity));
@@ -1070,6 +1087,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
 .shadow {
@@ -1199,6 +1221,9 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  &.btn-icon-between {
+    justify-content: space-between !important;
+  }
   &.btn_primary {
     --btn-background: #b3762c;
     --btn-color: #fff;
@@ -1242,7 +1267,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   &.btn-text-left {
     text-align: left;
   }
-  &.btn-full {
+  &.btn_full {
     width: 100%;
   }
   &.btn_right_chevron {

@@ -98,6 +98,9 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 
     @apply px-4 py-3 rounded-xl inline-flex items-center justify-center transition-all cursor-pointer;
 
+    &.btn-icon-between{
+      @apply !justify-between;
+    }
     &.btn_primary {
         --btn-background: theme("colors.primary.600");
         --btn-color: theme("colors.white");
@@ -120,7 +123,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     &.btn-text-left{
       @apply text-left justify-start;
     }
-    &.btn-full{
+    &.btn_full{
       @apply w-full;
     }
     &.btn_right_chevron {

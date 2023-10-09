@@ -156,6 +156,9 @@ video {
   color: var(--btn-color);
   @apply px-4 py-3 rounded-xl inline-flex items-center justify-center transition-all cursor-pointer;
 }
+.btn_.btn-icon-between {
+  @apply !justify-between;
+}
 .btn_.btn_primary {
   --btn-background: theme("colors.primary.600");
   --btn-color: theme("colors.white");
@@ -176,7 +179,7 @@ video {
 .btn_.btn-text-left {
   @apply text-left justify-start;
 }
-.btn_.btn-full {
+.btn_.btn_full {
   @apply w-full;
 }
 .btn_.btn_right_chevron:after {

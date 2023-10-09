@@ -1,38 +1,71 @@
 @@include('static/header.html')
 
 <div class="main flex">
-    <div class="mobile-screen mx-auto overflow-hidden ms-back" >
+    <div class="mobile-screen mx-auto overflow-hidden ms-back">
         <div class="py-4 px-4 gap-2 h-full flex flex-col w-full items-center justify-center">
-            <a href="/pages/menu.html" data-btn-ripple  class="text-center font-bold text-xl text-white py-3 px-2 w-full bg-primary-700/70 backdrop-blur rounded-xl">
+            <a class="text-center font-bold text-xl text-white py-3 px-2 w-full bg-primary-700/70 backdrop-blur rounded-xl" data-btn-ripple
+               href="/pages/menu.html">
                 Menüyü görmek için tıklayınız
             </a>
 
             <div class="grid grid-cols-2  w-full gap-1 relative z-50">
 
                 <div>
-                    <input type="radio" class="invisible absolute top[-9999px] check-radio-lang"
-                           name="lang_Select" id="lang_tr" checked>
+                    <input checked class="invisible absolute top[-9999px] check-radio-lang"
+                           id="lang_tr" name="lang_Select" type="radio">
 
-                    <label for="lang_tr" data-btn-ripple class="lang-label">
+                    <label class="lang-label" data-btn-ripple for="lang_tr">
                         <div class="tr-flag-svg ll-text flex items-center gap-1 text-white">Türkçe</div>
                     </label>
                 </div>
 
                 <div>
-                    <input type="radio" class="invisible absolute top[-9999px] check-radio-lang"
-                           name="lang_Select" id="lang_en">
+                    <input class="invisible absolute top[-9999px] check-radio-lang" id="lang_en"
+                           name="lang_Select" type="radio">
 
-                    <label for="lang_en" data-btn-ripple class="lang-label">
+                    <label class="lang-label" data-btn-ripple for="lang_en">
                         <div class="en-flag-svg ll-text flex items-center gap-1 text-white">English</div>
                     </label>
                 </div>
                 <div>
-                    <input type="radio" class="invisible absolute top[-9999px] check-radio-lang"
-                           name="lang_Select" id="lang_ar">
+                    <input class="invisible absolute top[-9999px] check-radio-lang" id="lang_ar"
+                           name="lang_Select" type="radio">
 
-                    <label for="lang_ar" data-btn-ripple class="lang-label">
+                    <label class="lang-label" data-btn-ripple for="lang_ar">
                         <div class="ar-flag-svg ll-text flex items-center gap-1 text-white">Arabic</div>
                     </label>
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col gap-2">
+                <button class="btn_ text-white !bg-primary-700/80 backdrop-blur btn_full flex !items-center !justify-between">
+                    Geri bildirim gönder
+                    <i class="gg-comment"></i>
+                </button>
+                <div class="grid grid-cols-2 gap-2">
+                    <a class="btn_ text-white !bg-primary-700/80 backdrop-blur btn-icon-between btn_left-icon" href="https://api.whatsapp.com/send?phone=905354902323"
+                       target="_blank">
+                        <p class="flex flex-col">
+                            <span>Whatsapp</span>
+                            <span class="text-xs tracking-tight text-primary-200">0 535 490 23 23</span>
+                        </p>
+                        <i class="whatsapp-icon w-[1.375rem] h-[1.375rem]"></i>
+                    </a>
+                    <a class="btn_ text-white !bg-primary-700/80 backdrop-blur btn-icon-between btn_left-icon" href="tel:02126372304">
+                        <p class="flex flex-col">
+                            <span>Restoranı Ara</span>
+                            <span class="text-xs tracking-tight text-primary-200">0 212 637 23 04</span>
+                        </p>
+                        <i class="gg-phone text-emerald-500"></i>
+                    </a>
+                    <a class="btn_ text-white btn_full col-span-2 !bg-primary-700/80 backdrop-blur btn-icon-between btn_left-icon"
+                       href="mailto:info@backhaus.com.tr">
+                        <p class="flex flex-col">
+                            <span>E-posta gönder</span>
+                            <span class="text-xs tracking-tight text-primary-200">info@backhaus.com.tr</span>
+                        </p>
+                        <i class="gg-mail text-blue-400"></i>
+                    </a>
                 </div>
             </div>
         </div>
