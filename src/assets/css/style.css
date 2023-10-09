@@ -1017,6 +1017,16 @@ video {
   letter-spacing: -0.025em;
 }
 
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.text-emerald-500 {
+  --tw-text-opacity: 1;
+  color: rgb(16 185 129 / var(--tw-text-opacity));
+}
+
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
@@ -1178,6 +1188,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   background: var(--btn-background);
   color: var(--btn-color);
   display: inline-flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   border-radius: 0.75rem;
