@@ -233,6 +233,9 @@ video {
 .collapse {
   visibility: unset !important;
 }
+[data-show=false] {
+  display: none;
+}
 .menu-list-swiper {
   width: 100%;
 }
@@ -344,5 +347,18 @@ video {
 .check-radio-lang:checked + .lang-label {
   filter: brightness(1);
   @apply border-primary-600;
+}
+.direction-rtl {
+  direction: rtl;
+}
+.direction-rtl .slide-menu {
+  transform: translateX(315px);
+}
+.direction-rtl .slide-menu.slide-left {
+  transform: translateX(0px);
+}
+.direction-rtl .btn_.btn_right_chevron:after {
+  margin-right: auto;
+  margin-left: unset;
 }
 /*# sourceMappingURL=tailwind.css.map */

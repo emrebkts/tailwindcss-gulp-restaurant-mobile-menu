@@ -9,8 +9,8 @@
           <i class="gg-chevron-left text-white " style=" --ggs: 1;"></i>
         </a>
         <div data-btn-ripple data-bs-toggle="modal" data-bs-target="#menuModal" class="text-center cursor-pointer flex items-center text-gray-700 justify-center gap-1 px-2">
-          <h3 class="line-clamp-1 text-lg font-semibold"  >Menü 1</h3>
-          <i class="gg-chevron-down-o text-primary-500" style="--ggs:.7;"></i>
+          <h3 class="line-clamp-1 text-lg font-semibold" >Backhaus</h3>
+
         </div>
         <button type="button" data-btn-ripple class="open-left-slide-menu w-8 h-8 flex items-center justify-center bg-primary-600 rounded-xl">
           <i class="gg-menu-left text-white" style=" --ggs: 1;"></i>
@@ -23,16 +23,16 @@
       <div class="px-3 py-2">
         <div class="swiper menu-list-swiper">
           <div class="swiper-wrapper">
-            <div data-btn-ripple class="swiper-slide max-w-[10rem]  active-menu-list-item">
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] mls-item" data-id="1">
               @@include('../components/header-menu-list.html')
             </div>
-            <div data-btn-ripple class="swiper-slide max-w-[10rem]">
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] mls-item" data-id="2">
               @@include('../components/header-menu-list.html')
             </div>
-            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] mls-item">
               @@include('../components/header-menu-list.html')
             </div>
-            <div data-btn-ripple class="swiper-slide max-w-[10rem] ">
+            <div data-btn-ripple class="swiper-slide max-w-[10rem] mls-item">
               @@include('../components/header-menu-list.html')
             </div>
           </div>
@@ -40,9 +40,47 @@
           <div class="swiper-button-prev shadow"></div>
         </div>
       </div>
+
+
       <div  class="menu-list px-2 py-3">
         <h3 class="text-xl font-semibold text-center text-primary-600">GLUTENSİZ ÜRÜNLER</h3>
-        <div class="flex flex-col gap-2 py-2">
+        <div class="flex flex-col gap-2 py-2 list-cat-items">
+          <a data-cat-id="1" data-show="false" class="bg-white shadow rounded-xl py-3  px-3 flex items-center justify-center lci-item" data-btn-ripple
+             href="/pages/single-menu.html">
+            <div class="flex flex-col flex-1 gap-1">
+
+              <h2 class="font-medium text-gray-800">Glutensiz Tatlı Kurupastalar</h2>
+              <p class="text-sm text-gray-600">Her gün taptaze üretilen kuru pastalarımız toplantılarınıza, davetlerine renk
+                ve lezzet katıyor.</p>
+              <span class="text-primary-500 font-medium">600,00 TL</span>
+
+            </div>
+            <div class="w-24">
+              <img
+                      alt=""
+                      class="w-24 rounded-xl"
+                      src="https://backhaus.com.tr/914-home_default_pizza/glutensiz-tatli-kurupastalar.jpg"
+              />
+            </div>
+          </a>
+          <a data-cat-id="2" data-show="false" class="bg-white shadow rounded-xl py-3  px-3 flex items-center justify-center lci-item" data-btn-ripple
+             href="/pages/single-menu.html">
+            <div class="flex flex-col flex-1 gap-1">
+
+              <h2 class="font-medium text-gray-800">Glutensiz Tatlı Kurupastalar</h2>
+              <p class="text-sm text-gray-600">Her gün taptaze üretilen kuru pastalarımız toplantılarınıza, davetlerine renk
+                ve lezzet katıyor.</p>
+              <span class="text-primary-500 font-medium">600,00 TL</span>
+
+            </div>
+            <div class="w-24">
+              <img
+                      alt=""
+                      class="w-24 rounded-xl"
+                      src="https://backhaus.com.tr/914-home_default_pizza/glutensiz-tatli-kurupastalar.jpg"
+              />
+            </div>
+          </a>
           @@include('../components/menu-list-card.html')
           @@include('../components/menu-list-card.html')
           @@include('../components/menu-list-card.html')
@@ -50,10 +88,48 @@
           @@include('../components/menu-list-card.html')
           @@include('../components/menu-list-card.html')
         </div>
+        <div class="px-4 py-3 text-gray-700 bg-gray-100 rounded-xl text-center not-item-alert" data-show="false" role="alert">
+          <p>Ürün Bulunamadı</p>
+        </div>
       </div>
 
+
+      <script>
+
+        function activeSliderItem(catId){
+          $(".not-item-alert").attr("data-show" , "false");
+          $(".list-cat-items .lci-item").each(function( index ) {
+            const itemCatId = $(this).data("cat-id");
+
+            if (catId == itemCatId && catId){
+              $(this).attr("data-show" , "true");
+            }else{
+              $(this).attr("data-show" , "false");
+            }
+          });
+
+          const itemLength = $(".list-cat-items .lci-item[data-show='true']").length;
+
+          if (itemLength <= 0){
+            $(".not-item-alert").attr("data-show" , "true");
+          }
+
+          $(".menu-list-swiper .mls-item").removeClass(" active-menu-list-item");
+          $(".menu-list-swiper .mls-item[data-id='"+catId+"']").addClass(" active-menu-list-item");
+        }
+
+        $(".menu-list-swiper .mls-item").click(function (){
+          const catId = $(this).data("id");
+          activeSliderItem(catId)
+        });
+
+
+        const defaultCatId = $(".menu-list-swiper .mls-item").eq(0).data("id");
+        activeSliderItem(defaultCatId);
+
+      </script>
+
     </div>
-    @@include('../components/sheet-menu.html')
   </div>
   @@include('../components/home-right.html')
 </div>
