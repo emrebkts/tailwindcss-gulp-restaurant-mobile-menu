@@ -123,7 +123,7 @@ video {
 }
 .right-screen .rs-back {
   background-color: var(--primary);
-  background-image: url("/images/makaron-backhaus.jpg");
+  background-image: url("/Clients/digi_menu//images/makaron-backhaus.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -138,7 +138,7 @@ video {
 }
 .mobile-screen.ms-back {
   background-color: var(--primary);
-  background-image: url("/images/nisantasi-slider.jpg");
+  background-image: url("/Clients/digi_menu//images/nisantasi-slider.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -309,7 +309,7 @@ video {
   --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 .whatsapp-icon {
-  background-image: url("/images/icons/whatsapp.svg");
+  background-image: url("/Clients/digi_menu/images/icons/whatsapp.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -318,7 +318,7 @@ video {
   width: 16px;
   height: 16px;
   margin-right: 3px;
-  background-image: url("/images/flags/tr.png");
+  background-image: url("/Clients/digi_menu/images/flags/tr.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -327,7 +327,7 @@ video {
   width: 16px;
   height: 16px;
   margin-right: 3px;
-  background-image: url("/images/flags/en.png");
+  background-image: url("/Clients/digi_menu/images/flags/en.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -336,13 +336,13 @@ video {
   width: 16px;
   height: 16px;
   margin-right: 3px;
-  background-image: url("/images/flags/ar.png");
+  background-image: url("/Clients/digi_menu/images/flags/ar.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 .lang-label {
   filter: brightness(0.7);
-  @apply border-4 transition transition-all border-solid border-transparent text-center flex items-center justify-center p-3 rounded-xl bg-primary-700/70 backdrop-blur cursor-pointer gap-2;
+  @apply border-4 transition transition-all border-solid text-xl border-transparent text-center flex items-center justify-center p-4 rounded-xl bg-primary-700/70 backdrop-blur cursor-pointer gap-2;
 }
 .check-radio-lang:checked + .lang-label {
   filter: brightness(1);

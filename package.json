@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "unocss \"src/**/*.{html,css}\" --watch",
-    "tailwind": "npx tailwindcss -i tailwind.less -o ./src/assets/css/style.css --watch"
+    "tailwind": "npx tailwindcss -i tailwind.css -o ./src/assets/css/style.css --watch"
   },
   "auxthor": "",
   "dependencies": {
