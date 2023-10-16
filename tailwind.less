@@ -283,9 +283,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .tr-flag-svg{
   &:before{
     content :"";
-    width: 16px;
-    height: 16px;
-    margin-right: 3px;
     background-image: url("/Clients/digi_menu/images/flags/tr.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -294,9 +291,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .en-flag-svg{
   &:before{
     content :"";
-    width: 16px;
-    height: 16px;
-    margin-right: 3px;
     background-image: url("/Clients/digi_menu/images/flags/en.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -305,17 +299,22 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .ar-flag-svg{
   &:before{
     content :"";
-    width: 16px;
-    height: 16px;
-    margin-right: 3px;
     background-image: url("/Clients/digi_menu/images/flags/ar.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
 }
 .lang-label{
-  filter:brightness(.7);
-  @apply border-4  transition transition-all border-solid text-xl border-transparent text-center flex items-center justify-center  p-4 rounded-xl bg-primary-700/70 backdrop-blur cursor-pointer gap-2;
+  filter:brightness(.8);
+  @apply border-4  transition transition-all border-solid text-1xl border-transparent text-center flex items-center justify-center  p-4 rounded-xl bg-primary-700/70 backdrop-blur cursor-pointer gap-2;
+  .ll-text{
+    &:before{
+      width: 24px;
+      height: 24px;
+      margin-right: 3px;
+    }
+  }
+
 }
 .check-radio-lang:checked + .lang-label{
   filter:brightness(1);

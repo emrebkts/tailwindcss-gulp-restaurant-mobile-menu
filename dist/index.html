@@ -32,32 +32,22 @@
 <div class="main flex">
     <div class="mobile-screen mx-auto overflow-hidden ms-back">
         <div class="py-4 px-4 gap-2 h-full flex flex-col w-full items-center justify-center">
+            <span class="text-center font-bold text-xl text-white py-3 px-2 w-full bg-primary-700/70 backdrop-blur rounded-xl">
+                Menü Dilini Seçin
+            </span>
+
             <div class="grid grid-cols-2  w-full gap-1 relative z-50">
-                <div>
-                    <input checked class="invisible absolute top[-9999px] check-radio-lang"
-                           id="lang_tr" name="lang_Select" type="radio">
 
-                    <label class="lang-label" data-btn-ripple for="lang_tr">
-                        <div class="tr-flag-svg ll-text flex items-center gap-1 text-white">Türkçe</div>
-                    </label>
-                </div>
+                <a href="/pages/menu.html" class="lang-label" data-btn-ripple>
+                    <div class="tr-flag-svg ll-text flex items-center gap-1 text-white">Türkçe</div>
+                </a>
 
-                <div>
-                    <input class="invisible absolute top[-9999px] check-radio-lang" id="lang_en"
-                           name="lang_Select" type="radio">
-
-                    <label class="lang-label" data-btn-ripple for="lang_en">
-                        <div class="en-flag-svg ll-text flex items-center gap-1 text-white">English</div>
-                    </label>
-                </div>
-                <div>
-                    <input class="invisible absolute top[-9999px] check-radio-lang" id="lang_ar"
-                           name="lang_Select" type="radio">
-
-                    <label class="lang-label" data-btn-ripple for="lang_ar">
-                        <div class="ar-flag-svg ll-text flex items-center gap-1 text-white">Arabic</div>
-                    </label>
-                </div>
+                <a href="/pages/menu.html" class="lang-label" data-btn-ripple>
+                    <div class="en-flag-svg ll-text flex items-center gap-1 text-white">English</div>
+                </a>
+                <a href="/pages/menu.html" class="lang-label" data-btn-ripple>
+                    <div class="ar-flag-svg ll-text flex items-center gap-1 text-white">Arabic</div>
+                </a>
             </div>
         </div>
     </div>
