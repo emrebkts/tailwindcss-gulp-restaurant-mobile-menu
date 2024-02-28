@@ -305,7 +305,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   }
 }
 .lang-label{
-  filter:brightness(.8);
+  filter:brightness(.7);
   @apply border-4  transition transition-all border-solid text-1xl border-transparent text-center flex items-center justify-center  p-4 rounded-xl bg-primary-700/70 backdrop-blur cursor-pointer gap-2;
   .ll-text{
     &:before{
@@ -314,12 +314,12 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
       margin-right: 3px;
     }
   }
-
 }
-.check-radio-lang:checked + .lang-label{
+.lang-label.active{
   filter:brightness(1);
   @apply  border-primary-600 ;
 }
+
 
 .direction-rtl{
   direction: rtl;
@@ -334,6 +334,25 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
       &:after{
         margin-right: auto;
         margin-left: unset;
+      }
+    }
+  }
+}
+
+@layer components{
+  .rhZBdQ{
+    @apply grid grid-cols-2 gap-3 w-full px-5 ;
+    .rQ_item{
+      @apply shadow-xl w-full aspect-square rounded-3xl relative overflow-hidden;
+      img{
+        @apply w-full h-full object-cover;
+      }
+      span{
+        @apply z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute w-full px-5 text-center text-xl text-white font-semibold uppercase;
+      }
+      &:after{
+        content:"";
+        @apply bg-primary-900/60 absolute top-0 left-0 w-full h-full;
       }
     }
   }
